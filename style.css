@@ -1,3 +1,19 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .noto-sans {
   font-family: 'Noto Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  /* height: auto; */
+  display: block;
 }
