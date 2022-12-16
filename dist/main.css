@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+/*#region: general body stylization*/
 body {
   margin: 0;
   font-family: 'Noto Sans', sans-serif;
@@ -30,6 +31,12 @@ p {
   margin: 0 auto;
 }
 
+/*#endregion*/
+.spacing > * + * {
+  margin-top: var(--spacer, 2rem);
+}
+
+/*#region: buttons*/
 .btn {
   /* display inline-block prevents the text from overlapping */
   display: inline-block;
@@ -50,6 +57,8 @@ p {
   opacity: .9;
 }
 
+/*#endregion*/
+/*#region: heading, title and hero +*/
 .primary-title {
   font-size: 4rem;
   /* SASS: handles some responsive typography */
@@ -71,5 +80,7 @@ p {
     background-blend-mode: multiply;
   }
 }
+
+/*#endregion*/
 
 /*# sourceMappingURL=main.css.map */

@@ -4,6 +4,8 @@
   box-sizing: border-box;
 }
 
+
+/*#region: general body stylization*/
 body {
   margin: 0;
   font-family: 'Noto Sans', sans-serif;
@@ -30,6 +32,17 @@ p {
   margin: 0 auto;
 }
 
+/*#endregion*/
+
+
+// NOTE: what this is saying is any element that is the adjacent sibling (comes after another sibling) is the direct child of spacing
+.spacing>*+* {
+  margin-top: var(--spacer, 2rem);
+}
+
+
+
+/*#region: buttons*/
 .btn {
   /* display inline-block prevents the text from overlapping */
   display: inline-block;
@@ -51,6 +64,11 @@ p {
   opacity: .9;
 }
 
+/*#endregion*/
+
+
+
+/*#region: heading, title and hero +*/
 .primary-title {
   font-size: 4rem;
   /* SASS: handles some responsive typography */
@@ -67,9 +85,18 @@ p {
   padding: 15em 0;
   background: #222;
 
+  // @supports may not be supported or known. If not it won't be read by the computer
   @supports (background-blend-mode: multiply) {
     background-image: url(../landing-page/app_images/grad-pic.jpg),
       radial-gradient(#444, #111);
     background-blend-mode: multiply
   }
 }
+
+// NOTE: if writing normal CSS, use this format instead of the one shown above
+// @supports (property: value) {
+//   .hero {
+
+//   }
+// }
+/*#endregion*/
