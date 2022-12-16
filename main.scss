@@ -35,7 +35,8 @@ p {
 /*#endregion*/
 
 
-// NOTE: what this is saying is any element that is the adjacent sibling (comes after another sibling) is the direct child of spacing
+// REVIEW: what this is saying is any element that is the adjacent sibling (comes after another sibling) is the direct child of spacing
+// FIXME: it isn't adding the spaces between the text
 .spacing>*+* {
   margin-top: var(--spacer, 2rem);
 }
@@ -93,7 +94,7 @@ p {
   }
 }
 
-// NOTE: if writing normal CSS, use this format instead of the one shown above
+// REVIEW: if writing normal CSS, use this format instead of the one shown above
 // @supports (property: value) {
 //   .hero {
 
