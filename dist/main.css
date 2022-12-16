@@ -41,8 +41,7 @@ p {
   padding: .5em 1.25em;
   background-color: var(--clr-accent, blue);
   border-radius: .25em;
-  transition: transform 250ms ease-in-out,
-    opacity 250ms linear;
+  transition: transform 250ms ease-in-out, opacity 250ms linear;
 }
 
 .btn:hover,
@@ -59,16 +58,18 @@ p {
   text-transform: uppercase;
 }
 
-// .section-title {}
-
 .hero {
   color: white;
   text-align: center;
   padding: 15em 0;
-  background-color: #222;
-  background-image: url(../app_images/grad-pic.jpg),
-    radial-gradient(#444, #111);
-  background-blend-mode: multiply;
-  // background-size: 10%;
-
+  background: #222;
 }
+
+@supports (background-blend-mode: multiply) {
+  .hero {
+    background-image: url(../landing-page/app_images/grad-pic.jpg), radial-gradient(#444, #111);
+    background-blend-mode: multiply;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
