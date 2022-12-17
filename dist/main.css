@@ -74,13 +74,6 @@ p {
   background: #222;
 }
 
-@supports (background-blend-mode: multiply) {
-  .hero {
-    background-image: url(../landing-page/app_images/grad-pic.jpg), radial-gradient(#444, #111);
-    background-blend-mode: multiply;
-  }
-}
-
 /*#endregion*/
 
 /*# sourceMappingURL=main.css.map */
