@@ -96,7 +96,7 @@ p {
   padding: 15em 0;
   background: #222;
 
-  // FIXME: page only shows a grey-black background rather than an image like it should.
+  // FIXME: page only shows a grey-black background rather than an image like it should
   @supports (background-blend-mode: multiply) {
     background-image: url(../landing-page/app_images/grad-pic.jpg),
       radial-gradient(#444, #111);
