@@ -119,7 +119,6 @@ section {
 }
 
 .featured__item {
-  display: block;
   position: relative;
   transform: scale(0.85);
   transition: transform 250ms ease-in-out;
