@@ -26,6 +26,10 @@ p {
   margin: 0;
 }
 
+section {
+  padding: 7em 0;
+}
+
 .container {
   /* the width 85% just prevents things from touching the sides. The same effect could be achieved with padding */
   width: 85%;
@@ -33,7 +37,24 @@ p {
   margin: 0 auto;
 }
 
+.split {
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &>* {
+    flex-basis: 30%;
+    min-width: 15em; //be careful that the min-width doesn't cause side scrolling
+  }
+
+  // .split > *{
+  // }
+}
+
 /*#endregion*/
+
+
 
 
 
@@ -88,7 +109,13 @@ p {
   text-transform: uppercase;
 }
 
-// .section-title {}
+.section-title {
+  text-align: center;
+  font-size: clamp(2.5rem, calc(5vw + 1rem), 4rem);
+  line-height: 1;
+  color: #17353d;
+  margin-bottom: 5rem;
+}
 
 .hero {
   color: white;
@@ -96,7 +123,7 @@ p {
   padding: 15em 0;
   background: #222;
 
-  // FIXME: page only shows a grey-black background rather than an image like it should
+  // FIXME page only shows a grey-black background rather than an image like it should
   @supports (background-blend-mode: multiply) {
     background-image: url(../landing-page/app_images/grad-pic.jpg),
       radial-gradient(#444, #111);
@@ -107,10 +134,33 @@ p {
   }
 }
 
-// REVIEW: if writing normal CSS, use this format instead of the one shown above
+// REVIEW if writing normal CSS, use this format instead of the one shown above
 // @supports (property: value) {
 //   .hero {
 
 //   }
 // }
+/*#endregion*/
+
+
+
+
+
+/*#region*/
+.featured {
+  background: #eee;
+
+  &__item {
+    display: block;
+    position: relative;
+    transform: scale(.85);
+    transition: transform 250ms ease-in-out; //makes the image grow slightly on hover
+
+    &:hover,
+    &:focus {
+      transform: scale(1);
+    }
+  }
+}
+
 /*#endregion*/
