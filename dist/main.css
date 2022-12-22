@@ -126,6 +126,7 @@ section {
 
 .featured__item:hover, .featured__item:focus {
   transform: scale(1);
+  opacity: .0;
 }
 
 /*#endregion*/
